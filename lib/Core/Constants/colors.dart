@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
   const Color kTitleColor = Color(0xff312C66);
   const Color kPlaceholder = Color(0xffa4a4a4);
   const Color kChatTextBGColor = Color(0xff115173);
+  const Color kVeryWhitheColor = Color.fromARGB(255, 255, 255, 255);
  
 
 
