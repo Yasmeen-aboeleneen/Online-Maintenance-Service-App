@@ -21,7 +21,7 @@ class RoundTextfield extends StatelessWidget {
     var h = MediaQuery.of(context).size.height;
     var w = MediaQuery.of(context).size.height;
     return Container(
-      height: h * .1,
+      height: h * .06,
       width: w,
       decoration: BoxDecoration(
           color: kVeryWhitheColor,
@@ -32,12 +32,14 @@ class RoundTextfield extends StatelessWidget {
           controller: controller,
           keyboardType: keyboardType,
           obscureText: obscureText,
+          cursorColor: kSecondaryColor,
           style: const TextStyle(
             color: kPrimaryColor,
             fontSize: 12,
             fontWeight: FontWeight.w500,
           ),
           decoration: InputDecoration(
+              contentPadding: const EdgeInsets.all(15),
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               hintText: hintText,
