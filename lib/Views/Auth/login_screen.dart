@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:online_maintenance_service/Core/Components/round_TextField.dart';
 import 'package:online_maintenance_service/Core/Components/round_button.dart';
 import 'package:online_maintenance_service/Core/Constants/colors.dart';
+import 'package:online_maintenance_service/Views/Auth/signup_screen.dart';
+import 'package:online_maintenance_service/Views/Home/home_screen.dart';
+import 'package:online_maintenance_service/Views/Widgets/loginWith_Containers.dart';
 
 import '../../Core/Components/round_pass_textField.dart';
 
@@ -86,15 +89,89 @@ class _SigninScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: h * .04,
                         ),
-                        const RoundPassTextfield(hintText: 'Password')
+                        const RoundPassTextfield(hintText: 'Password'),
+                        SizedBox(
+                          height: h * .02,
+                        ),
+                        Align(
+                            alignment: Alignment.centerRight,
+                            child: GestureDetector(
+                                child: Text(
+                              'Forget password?',
+                              style: TextStyle(
+                                  fontSize: w * .018,
+                                  fontWeight: FontWeight.w500,
+                                  color: kSecondaryColor),
+                            ))),
+                        SizedBox(
+                          height: h * .02,
+                        ),
+                        RoundButton(
+                            title: 'Login',
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const HomeScreen()));
+                            },
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                        SizedBox(
+                          height: h * .03,
+                        ),
+                        Align(
+                            alignment: Alignment.centerLeft,
+                            child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SignupScreen()));
+                                },
+                                child: Text(
+                                  "Don't have an account? Sign up",
+                                  style: TextStyle(
+                                      fontSize: w * .019,
+                                      fontWeight: FontWeight.w500,
+                                      color: kSecondaryColor),
+                                ))),
+                        SizedBox(
+                          height: h * .03,
+                        ),
+                        Row(
+                          children: [
+                            const Expanded(
+                              child: Divider(
+                                color: kSecondaryColor,
+                                thickness: 3,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'Or Log in with',
+                                style: TextStyle(
+                                    fontSize: w * .02,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            const Expanded(
+                              child: Divider(
+                                color: kSecondaryColor,
+                                thickness: 3,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: h * .03,
+                        ),
+                        const LoginwithContainers()
                       ],
                     ),
                   ),
-                  RoundButton(
-                      title: 'Login',
-                      onPressed: () {},
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold)
                 ],
               ),
             ),
