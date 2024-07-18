@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Auth/signin_screen.dart';
+import '../Auth/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void goStart() {
     Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(builder: (context) => const SigninScreen()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
         (route) => true);
   }
 
