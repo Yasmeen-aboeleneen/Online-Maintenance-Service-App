@@ -85,11 +85,18 @@ class _SigninScreenState extends State<LoginScreen> {
                         SizedBox(
                           height: h * .02,
                         ),
-                        const RoundTextfield(hintText: 'Email'),
+                        RoundTextfield(
+                          hintText: 'Email',
+                          controller: email,
+                          keyboardType: TextInputType.emailAddress,
+                        ),
                         SizedBox(
                           height: h * .04,
                         ),
-                        const RoundPassTextfield(hintText: 'Password'),
+                        RoundPassTextfield(
+                          hintText: 'Password',
+                          controller: password,
+                        ),
                         SizedBox(
                           height: h * .02,
                         ),

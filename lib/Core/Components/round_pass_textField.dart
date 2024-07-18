@@ -53,7 +53,7 @@ class _RoundPassTextfieldState extends State<RoundPassTextfield> {
           obscureText: widget.obscureText,
           cursorColor: kSecondaryColor,
           style: const TextStyle(
-            color: kPrimaryColor,
+            color: kSecondaryColor,
             fontSize: 15,
             fontWeight: FontWeight.w500,
           ),

@@ -34,7 +34,7 @@ class RoundTextfield extends StatelessWidget {
           obscureText: obscureText,
           cursorColor: kSecondaryColor,
           style: const TextStyle(
-            color: kPrimaryColor,
+            color: kSecondaryColor,
             fontSize: 15,
             fontWeight: FontWeight.w500,
           ),
@@ -43,8 +43,8 @@ class RoundTextfield extends StatelessWidget {
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               hintText: hintText,
-              hintStyle:   TextStyle(
-                fontSize: w*.018,
+              hintStyle: TextStyle(
+                fontSize: w * .018,
                 color: kPlaceholder,
               ))),
     );
